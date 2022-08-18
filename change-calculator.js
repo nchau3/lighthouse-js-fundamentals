@@ -42,26 +42,13 @@ const calculateChange = function(total, cash) {
       break;
     }
   }
+
   //delete any zero value properties
-  for (let i = 0; i < 10; i++) {
-    if (exactChange.twentyDollar === 0) {
-      delete exactChange.twentyDollar;
-    } else if (exactChange.tenDollar === 0) {
-      delete exactChange.tenDollar;
-    } else if (exactChange.fiveDollar === 0) {
-      delete exactChange.fiveDollar;
-    } else if (exactChange.twoDollar === 0) {
-      delete exactChange.twoDollar;
-    } else if (exactChange.oneDollar === 0) {
-      delete exactChange.oneDollar;
-    } else if (exactChange.quarter === 0) {
-      delete exactChange.quarter;
-    } else if (exactChange.dime === 0) {
-      delete exactChange.dime;
-    } else if (exactChange.nickel === 0) {
-      delete exactChange.nickel;
-    } else if (exactChange.penny === 0) {
-      delete exactChange.penny;
+  let exactChangeEntries = Object.entries(exactChange);
+
+  for (let i = 0; i < exactChangeEntries.length; i++) {
+    if (exactChangeEntries[i][1] === 0) {
+      delete exactChange[exactChangeEntries[i][0]];
     }
   } return exactChange;
 }
