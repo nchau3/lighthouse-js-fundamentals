@@ -4,7 +4,7 @@ const organizeInstructors = function(instructors) {
   for (let i = 0; i < instructors.length; i++) {
     newList[instructors[i].course] = [];
   }
-  // compare instructor names to courses, push to corresponding arrays in new object
+  // compare instructor names to courses, push to corresponding arrays
   let newListEntries = Object.entries(newList);
   for (let i = 0; i < newListEntries.length; i++) {
     for (let j = 0; j < instructors.length; j++) {

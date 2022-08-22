@@ -11,7 +11,7 @@ const vegetables = [
   },
   {
     submitter: 'Hamid Hamidson',
-    redness: 12,
+    redness: 16,
     plumpness: 3
   },
   {
